@@ -1,0 +1,15 @@
+{
+  "name": "cyientseptember",
+  "version": "1.0.0",
+  "description": "Sample Module Usage",
+  "main": "usimngRandomize.js",
+  "scripts": {},
+  "author": "Mayank Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "fetch": "^1.1.0",
+    "randomize": "0.0.4",
+    "react": "^17.0.2"
+  }
+}
