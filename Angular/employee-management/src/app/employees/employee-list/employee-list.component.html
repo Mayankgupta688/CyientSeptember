@@ -1,0 +1,21 @@
+Filter Text: <input type="text" [(ngModel)]="filterText" (keyup)="getElementValue()" #userName />
+<input type="button" (click)="updateList(userName.value)" value="Click to Update" /><br/><br/>
+
+<ng-container *ngFor="let employee of empList">
+        <ng-container *ngIf="employee.id % 2 == 0" >
+            <div class="card" style="width: 18rem;" class="employee-container">
+                <img src="https://images.unsplash.com/photo-1579256945823-f007794790df?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZW1wbG95ZWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">{{employee.name}} ({{employee.id}})</h5>
+                <section class="card-text">
+                    <section *ngIf="employee.id % 2 == 0" style="font-size: 12px;">Employee Id is Even...</section>
+                    <section *ngIf="employee.id % 2 == 1" style="font-size: 12px;">Employee Id is Odd</section>
+                    <br/>
+                    Some quick example text to build on the card title and make up the bulk of the card's content.</section><br/>
+                <a href="#" class="btn btn-primary">Delete {{employee.name}}</a>
+                </div>
+            </div>
+        </ng-container>
+</ng-container>
+
+Filter Text: <input type="text" [(ngModel)]="filterText" (keyup)="getElementValue()" #userName />
