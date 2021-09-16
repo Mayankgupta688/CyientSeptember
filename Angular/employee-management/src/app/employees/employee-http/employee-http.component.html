@@ -1,0 +1,21 @@
+<div style="border: 1px solid red; margin: 10px; padding: 10px;">
+    <b style="width: 200px; display: inline-block;">Enter Name</b><input type="text" [(ngModel)]="newUserName" /><br/><br/>
+    <b style="width: 200px; display: inline-block;">Enter Id</b><input type="text" [(ngModel)]="newUserId" /><br/><br/>
+    <input type="button" class="btn btn-primary" (click)="addEmployee()" value="Add employee" /> 
+</div>
+
+
+<ng-container *ngFor="let employee of empList">
+    <ng-container >
+        <div class="card" style="width: 18rem;" class="employee-container">
+            <img src="https://images.unsplash.com/photo-1579256945823-f007794790df?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZW1wbG95ZWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80;" [class]="imageClass">
+            <div class="card-body">
+                <h5 class="card-title">{{employee.name}} ({{employee.id}})</h5>
+                <section class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                </section><br/>
+                <input type="button" class="btn btn-primary" value="Delete {{employee.name}}" (click)="deleteEmployee(employee.id)"/>
+            </div>
+        </div>
+    </ng-container>
+</ng-container>

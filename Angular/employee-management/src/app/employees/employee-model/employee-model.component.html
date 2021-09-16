@@ -1,0 +1,21 @@
+<h1>Current Time {{currentTime}}</h1>
+
+<app-employee-count></app-employee-count>
+
+Filter Text: <input type="text" [ngModel]="filterText" (ngModelChange)="getInfo($event)" /><br/><br/>
+
+<ng-container *ngFor="let employee of empList">
+    <ng-container >
+        <div class="card" style="width: 18rem;" class="employee-container">
+            <img [src]="imageUrl" [class]="imageClass" [alt]="imageAlTText" [title]="imageTitle">
+            <div class="card-body">
+                <h5 [ngClass]= "{ 'red-text': employee.id % 2 == 1, 'green-text': employee.id % 2 == 0 }" class="card-title">{{employee.name}} ({{employee.id}})</h5>
+                <h5 [ngClass]= "employee.id % 2 == 0 ? 'red-text': 'green-text'" class="card-title">{{employee.name}} ({{employee.id}})</h5>
+                <section class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                </section><br/>
+                <input type="button" (click)="deleteEmployee(employee.id)" class="btn btn-primary" value="Delete {{employee.name}}" />
+            </div>
+        </div>
+    </ng-container>
+</ng-container>

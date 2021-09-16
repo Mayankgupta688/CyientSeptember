@@ -1,0 +1,12 @@
+.employee-container {
+    display: inline-block;
+    margin: 10px;
+}
+
+.green-text {
+    color: green
+}
+
+.red-text {
+    color: red
+}
