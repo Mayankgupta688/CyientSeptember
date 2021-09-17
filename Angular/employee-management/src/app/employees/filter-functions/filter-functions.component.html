@@ -1,0 +1,8 @@
+<h1>Lowercase User Name is: {{userName | transormValue : "_" : " "}}</h1>
+<h2>Uppercase Name is: {{userName | uppercase}}</h2>
+<h2>Original Name is: {{userName}}</h2>
+
+<h3>Orignal Salary Variable: {{salary}}</h3>
+<h3>Salary with symbol: {{salary | currency : "USD" : true}}</h3>
+
+<h4>Custom Pipes Value {{userName | transormValue : "_" : " " | transormValue : "@" : ""  | transormValue : "," : "" | uppercase}}</h4>

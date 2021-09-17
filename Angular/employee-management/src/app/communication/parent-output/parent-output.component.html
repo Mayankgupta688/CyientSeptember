@@ -1,0 +1,2 @@
+<h1>Company Name is {{userInfo.name}}</h1>
+<app-child-output [existence]="userInfo.existence" [designation]="userInfo.designation" (notifier)="updateData($event)"></app-child-output>

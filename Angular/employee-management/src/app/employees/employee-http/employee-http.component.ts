@@ -13,10 +13,14 @@ export class EmployeeHttpComponent {
   newUserId: string = "";
 
   constructor(private _httpClient: HttpClient) { 
+  }
+
+  ngOnInit() {
     this._httpClient.get("http://localhost:3000/employees").subscribe((data) => {
       this.empList = data;
     })
   }
+  
   imageClass = "card-img-top";
 
   deleteEmployee(empId: any) {

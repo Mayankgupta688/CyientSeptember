@@ -1,0 +1,8 @@
+<form [formGroup]="userDetailsForm" (ngSubmit)="submitData()">
+    <b>Enter User Name: </b><input type="text" formControlName="userName" /><br/><br/>
+    <b style="color: red;" *ngIf="!this.userDetailsForm.get('userName').valid">Please Enter User Name</b><br/><br/>
+    <b>Enter User Id: </b><input type="text" formControlName="userId" /><br/><br/>
+    <b style="color: red;" *ngIf="!this.userDetailsForm.get('userId').valid">Please Enter Correct Id</b><br/><br/>
+    <b style="color: red;" *ngIf="!this.userDetailsForm.valid">Please Validate the Form</b><br/><br/>
+    <input type="submit" value="Submit Data" [disabled]="!this.userDetailsForm.valid" />
+</form>

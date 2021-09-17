@@ -1,0 +1,20 @@
+<div *delayRendering>
+    <b>Given Below is Filter to Select Employees</b><br/>
+    <b>Filter Employee: </b><input type="text" [(ngModel)]="filterText" /><br/><br/>
+</div>
+
+
+<ng-container *ngFor="let employee of empList | employeeFilter: filterText">
+    <ng-container >
+        <div class="card" style="width: 18rem;" class="employee-container">
+            <img *delayRendering src="https://images.unsplash.com/photo-1579256945823-f007794790df?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZW1wbG95ZWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80;" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{employee.name}} ({{employee.id}})</h5>
+                <section class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                </section><br/>
+                <input type="button" class="btn btn-primary" value="Delete {{employee.name}}">
+            </div>
+        </div>
+    </ng-container>
+</ng-container>

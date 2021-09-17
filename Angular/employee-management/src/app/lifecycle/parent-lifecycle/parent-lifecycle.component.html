@@ -1,0 +1,5 @@
+<h1>User Name is : {{userName}}</h1>
+<h1>User Age is : {{userAge}}</h1>
+<input type="button" (click)="updateData()" value="Update Name" /><hr/><br/>
+
+<app-child-lifecycle [userName]="userName" [userAge]="userAge"></app-child-lifecycle>

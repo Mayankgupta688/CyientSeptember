@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { ContainerComponent } from "./companyPage/containerComponent/container.component";
 import { ContentComponent } from "./companyPage/contentComponent/content.component";
@@ -15,9 +15,21 @@ import { EmployeeModelComponent } from './employees/employee-model/employee-mode
 import { EmployeeCountComponent } from './employees/employee-count/employee-count.component';
 import { EmployeeHttpComponent } from './employees/employee-http/employee-http.component';
 import { HttpClientModule } from "@angular/common/http";
+import { FilterFunctionsComponent } from './employees/filter-functions/filter-functions.component';
+import { TransformPipe } from "./pipes/transform-value.pipe";
+import { FilterEmployeesComponent } from './employees/filter-employees/filter-employees.component';
+import { EmployeeFilterPipe } from "./pipes/employee-filter.pipe";
+import { DelayRenderingDirective } from "./directives/delay-rendering.directive";
+import { ParentComponent } from './communication/parent/parent.component';
+import { ChildComponent } from './communication/child/child.component';
+import { ParentOutputComponent } from './communication/parent-output/parent-output.component';
+import { ChildOutputComponent } from './communication/child-output/child-output.component';
+import { ParentLifecycleComponent } from './lifecycle/parent-lifecycle/parent-lifecycle.component';
+import { ChildLifecycleComponent } from './lifecycle/child-lifecycle/child-lifecycle.component';
+import { ReactiveFormComponent } from './reactive/reactive-form/reactive-form.component';
 
 @NgModule({
-    imports: [ BrowserModule, FormsModule, HttpClientModule ],
+    imports: [ BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
     declarations: [ 
         AppComponent, 
         SecondComponent, 
@@ -31,8 +43,20 @@ import { HttpClientModule } from "@angular/common/http";
         EmployeeListComponent,
         EmployeeModelComponent,
         EmployeeCountComponent,
-        EmployeeHttpComponent
+        EmployeeHttpComponent,
+        FilterFunctionsComponent,
+        TransformPipe,
+        FilterEmployeesComponent,
+        EmployeeFilterPipe,
+        DelayRenderingDirective,
+        ParentComponent,
+        ChildComponent,
+        ParentOutputComponent,
+        ChildOutputComponent,
+        ParentLifecycleComponent,
+        ChildLifecycleComponent,
+        ReactiveFormComponent
     ],
-    bootstrap: [ EmployeeHttpComponent ]
+    bootstrap: [ ReactiveFormComponent ]
 })
 export class AppModule {}
