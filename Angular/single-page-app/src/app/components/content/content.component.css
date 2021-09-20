@@ -1,0 +1,11 @@
+.content-container {
+    height: 400px;
+    border: 1px solid red;
+    padding-left: 10px;
+} 
+
+a {
+    margin: 10px;
+    margin-top: 10px;
+    display: inline-block;
+}

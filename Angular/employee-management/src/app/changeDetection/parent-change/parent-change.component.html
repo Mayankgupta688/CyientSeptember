@@ -1,0 +1,6 @@
+<h1>This is Parent Component...</h1>
+<h2>User Name is {{userDetails.name}}</h2>
+<input type="button" (click)="changeUserName()" value="Change Name" />
+<hr/>
+
+<app-child-change [userDetails]="userDetails"></app-child-change>

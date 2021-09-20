@@ -27,9 +27,14 @@ import { ChildOutputComponent } from './communication/child-output/child-output.
 import { ParentLifecycleComponent } from './lifecycle/parent-lifecycle/parent-lifecycle.component';
 import { ChildLifecycleComponent } from './lifecycle/child-lifecycle/child-lifecycle.component';
 import { ReactiveFormComponent } from './reactive/reactive-form/reactive-form.component';
+import { ParentChangeComponent } from './changeDetection/parent-change/parent-change.component';
+import { ChildChangeComponent } from './changeDetection/child-change/child-change.component';
+import { ApplyStyleDirective } from "./directives/apply-style.directive";
+import { StyleApplyComponent } from './changeDetection/style-apply/style-apply.component';
+import { SharedModule } from "./shared.module";
 
 @NgModule({
-    imports: [ BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
+    imports: [ BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule, SharedModule ],
     declarations: [ 
         AppComponent, 
         SecondComponent, 
@@ -55,8 +60,12 @@ import { ReactiveFormComponent } from './reactive/reactive-form/reactive-form.co
         ChildOutputComponent,
         ParentLifecycleComponent,
         ChildLifecycleComponent,
-        ReactiveFormComponent
+        ReactiveFormComponent,
+        ParentChangeComponent,
+        ChildChangeComponent,
+        ApplyStyleDirective,
+        StyleApplyComponent
     ],
-    bootstrap: [ ReactiveFormComponent ]
+    bootstrap: [ StyleApplyComponent ]
 })
 export class AppModule {}

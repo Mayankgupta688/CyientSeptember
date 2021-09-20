@@ -1,0 +1,4 @@
+<ng-container *ngFor="let employee of empList">
+    <h4>Employee Name: {{employee.name}}</h4>
+    <input type="button" (click)="redirectToDetails(employee.id, employee.name)" value="Validate" /><br/><hr/>
+</ng-container>
